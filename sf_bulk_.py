@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+/*
+@Author: Irfan Aziz
+@email: irfanaziz098@gmail.com
+*/
 import requests  as r
 import time
 batchfile=open('batchinfo1.txt','w')
