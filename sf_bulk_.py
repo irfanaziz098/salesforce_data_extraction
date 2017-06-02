@@ -9,14 +9,13 @@ batchfile=open('batchinfo1.txt','w')
 #For sandbox the url starts with test for production we use login
 url1='https://test.salesforce.com/services/Soap/u/39.0'
 header1={'Content-Type':'text/xml; charset=UTF-8','SOAPAction':'login'}
-#Reading the login.txt fíle does not work however it works otherwise. Need more better way to handle loginning!!
 #Now we can read the login.txt by hiding the credential!!!!!
 bod=open('login_preprod.txt','r')
 #Each time a request is sent using the login info we need to read it everytime
 resp1=r.post(url1,headers=header1,data=bod.read())
 print 'Response from login:',resp1
 #resp1=r.post(url1,headers=header1,data=bod.read())
-# Json not possible as reponse is in xml 
+# reponse is in xml 
 #cont=json.loads(resp1.content)
 #sid=cont["sessionId"]
 
